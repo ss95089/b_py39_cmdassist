@@ -1,0 +1,12 @@
+ls
+ls -al
+hostname
+uname -a
+ping 192.168.0.1
+echo "あいうえお"
+cd ~
+touch test.txt
+scp test.txt localhost:/tmp@@@password\:
+password
+ls -al /tmp/test.txt
+
