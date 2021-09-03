@@ -13,8 +13,8 @@ class WinExpect(object):
         self.process = psp.PopenSpawn('cmd')
         self.prompt = prompt
         self.timeout = timeout
-        self.cmd_sendline('')
-        # self.process.expect(self.prompt, timeout=self.timeout)
+        # self.cmd_sendline('')
+        self.process.expect(prompt, int(timeout))
 
         msg = '{}\n{}'.format(self.process.before.decode('shift-jis', errors='ignore').replace('\r\n', '\n'), self.process.after.decode('shift-jis', errors='ignore').replace('\r\n', '\n'))
         print(self.process.before.decode('shift-jis', errors='ignore').replace('\r\n', '\n'), end='')
